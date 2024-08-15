@@ -1,0 +1,19 @@
+#myDiv {
+    width: 70px;
+    height: 50px;
+    background-image: url("https://img1.picmix.com/output/stamp/normal/9/1/6/5/2525619_ae5cf.png");
+    background-size: cover;
+    position: absolute;
+    border: 1px solid black;
+}
+
+#div2 {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: green;
+    top: 40%;
+    left: 30%;
+}
+
+
