@@ -1,2 +1,2 @@
 nexhub
-The hub for all StickmanL games!
+where all the games made by rasz64 are
