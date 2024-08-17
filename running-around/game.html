@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            run around i guess 🤷
+        </title>
+        <style>
+            #player {
+                width: 25px;
+                height: 45px;
+                position: absolute;
+            }
+
+            #house1 {
+                width: 70px;
+                height: 120px;
+                position: absolute;
+                margin-top: 15%;
+                margin-left: 30%;
+            }
+        </style>
+    </head>
+<body>
+    <div id="player">
+        <pre>
+          O 
+         /|\
+         / \
+        </pre>
+    </div>
+    
+        <big><b>W A S D</b> to move</big>
+
+    <div id="house1">
+        <pre>
+               ______
+              / ____ \
+             / /____\ \
+            /__________\
+             |        |
+             |   __   |
+             |  |  |  |
+             |  |  |  |
+        </pre>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            var player = document.getElementById('player');
+            var currentLeft = parseInt(window.getComputedStyle(player).left);
+            var currentTop = parseInt(window.getComputedStyle(player).top);
+
+            switch(event.key) {
+                case 'a': 
+                    player.style.left = (currentLeft - 50) + 'px';
+                    break;
+                case 'd': 
+                    player.style.left = (currentLeft + 50) + 'px';
+                    break;
+                case 'w': 
+                    player.style.top = (currentTop - 50) + 'px' ;
+                    break;
+                case 's': 
+                    player.style.top = (currentTop + 50) + 'px' ;
+                    break;
+            }
+
+            if (isColliding(player, house1)) {
+                window.location.href = 'house1.html';
+            }
+        });
+
+        function isColliding(div1, div2) {
+            var rect1 = div1.getBoundingClientRect();
+            var rect2 = div2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                rect1.left > rect2.right || 
+                rect1.bottom < rect2.top || 
+                rect1.top > rect2.bottom);
+        }
+    </script>
+</body>
+</html>
