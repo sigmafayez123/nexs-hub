@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>
-            run around i guess 🤷
+            big city 🏙️
         </title>
         <style>
             #player {
                 width: 25px;
                 height: 45px;
                 position: absolute;
+                top: 5%;
             }
 
             #house1 {
@@ -17,6 +18,30 @@
                 position: absolute;
                 margin-top: 15%;
                 margin-left: 30%;
+            }
+
+            #house2 {
+                width: 70px;
+                height: 120px;
+                position: absolute;
+                margin-top: 8%;
+                margin-left: 70%;
+            }
+
+            #house3 {
+                width: 70px;
+                height: 120px;
+                position: absolute;
+                margin-top: 25%;
+                margin-left: 10%;
+            }
+
+            #house4 {
+                width: 70px;
+                height: 120px;
+                position: absolute;
+                margin-top: 12%;
+                margin-left: 23%;
             }
         </style>
     </head>
@@ -40,8 +65,47 @@
             /__________\
              |        |
              |   __   |
+             |  |¯¯|  |
              |  |  |  |
-             |  |  |  |
+        </pre>
+    </div>
+
+    <div id="house2">
+        <pre>
+              ________
+             /        \
+            /          \
+           /____________\
+           |            |
+           |     __     |
+           |    |¯¯|    |
+           |    |  |    |
+        </pre>
+    </div>
+
+    <div id="house3">
+        <pre>
+          ______
+         / ____ \
+        / /--|--\\
+       /_ ¯¯¯¯¯¯ _\
+        |        |________
+        |           __   |
+        |          |¯¯|  |
+        |          |  |  |
+        </pre>
+    </div>
+
+    <div id="house4">
+        <pre>
+               ______
+              / ____ \
+             / |____| \
+            /__________\
+             |        |
+             | __   _ |
+             ||¯¯| |_||
+             ||  |    |
         </pre>
     </div>
 
@@ -69,6 +133,18 @@
             if (isColliding(player, house1)) {
                 window.location.href = 'house1.html';
             }
+
+            if (isColliding(player, house2)) {
+                window.location.href = 'house2.html';
+            }
+
+            if (isColliding(player, house3)) {
+                window.location.href = 'house3.html';
+            }
+
+            if (isColliding(player, house4)) {
+                window.location.href = 'house4.html';
+            }
         });
 
         function isColliding(div1, div2) {
@@ -83,3 +159,4 @@
     </script>
 </body>
 </html>
+
