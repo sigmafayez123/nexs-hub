@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            house 🏠
+        </title>
+        <style>
+            #player {
+                width: 25px;
+                height: 45px;
+                position: absolute;
+                top: 35%;
+                left: 5%;
+            }
+
+            #housedoor {
+                width: 30px;
+                height: 55px;
+                position: absolute;
+                top: 35%;
+                left: 0%;
+            }
+
+            #kitchen {
+                margin-left: 45%;
+                margin-top: 5%;
+            }
+
+            #bed {
+                margin-left: 20%;
+                margin-top: 20%;
+            }
+        </style>
+    </head>
+<body>
+    <div id="player">
+        <pre>
+          O 
+         /|\
+         / \
+        </pre>
+    </div>
+
+        <big><b>W A S D</b> to move</big>
+        <a href="https://rasz64.github.io/nexs-hub">HOME PAGE</a>
+
+    <div id="housedoor">
+        <pre>
+         _____ 
+        |     |
+        |    &|
+        |     |
+        |_____|
+        </pre>
+    </div>
+        <pre id="kitchen">
+               
+         ___                                 ___
+        |O O|        _____________ __/¤_    |¯¯¯|
+        |O O|        |¯¯¯¯¯¯¯¯¯¯¯| | ¯¯|    |  &|
+        ¯¯¯¯¯                               |___|
+
+         |_ _________ _|
+         || |       | ||
+        </pre>
+
+        <pre id="bed">
+        ,_____,
+        |%%%%%|
+        |%%%%%|
+        |%%%%%|
+        |%%%%%|
+        |_███_|
+        </pre>
+        <pre id="wall">_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</pre>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            var player = document.getElementById('player');
+            var currentLeft = parseInt(window.getComputedStyle(player).left);
+            var currentTop = parseInt(window.getComputedStyle(player).top);
+
+            switch(event.key) {
+                case 'a': 
+                    player.style.left = (currentLeft - 50) + 'px';
+                    break;
+                case 'd': 
+                    player.style.left = (currentLeft + 50) + 'px';
+                    break;
+                case 'w': 
+                    player.style.top = (currentTop - 50) + 'px' ;
+                    break;
+                case 's': 
+                    player.style.top = (currentTop + 50) + 'px' ;
+                    break;
+            }
+
+            if (isColliding(player, housedoor)) {
+                window.location.href = 'game.html';
+            }
+        });
+
+        function isColliding(div1, div2) {
+            var rect1 = div1.getBoundingClientRect();
+            var rect2 = div2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                rect1.left > rect2.right || 
+                rect1.bottom < rect2.top || 
+                rect1.top > rect2.bottom);
+        }
+    </script>
+</body>
+</html>
