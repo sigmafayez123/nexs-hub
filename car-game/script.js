@@ -4,10 +4,10 @@ document.addEventListener('keydown', function(event) {
 
     switch(event.key) {
         case 'ArrowLeft':
-            player.style.left = (currentLeft - 35) + 'px';
+            player.style.left = (currentLeft - 37) + 'px';
             break;
         case 'ArrowRight':
-            player.style.left = (currentLeft + 35) + 'px';
+            player.style.left = (currentLeft + 37) + 'px';
             break;
     }
 });
