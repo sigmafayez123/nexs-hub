@@ -16,4 +16,32 @@
     left: 30%;
 }
 
+#div3 {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: green;
+    top: 10%;
+    left: 5%;
+}
+
+#div4 {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: green;
+    top: 25%;
+    left: 37%;
+}
+
+#div5 {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: green;
+    top: 15%;
+    left: 20%;
+}
+
+
 
