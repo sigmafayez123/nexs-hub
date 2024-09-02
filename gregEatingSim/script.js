@@ -65,3 +65,33 @@
                     rect1.bottom < rect2.top || 
                     rect1.top > rect2.bottom);
         }
+
+        function isColliding(div1, div3) {
+            var rect1 = div1.getBoundingClientRect();
+            var rect2 = div2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                    rect1.left > rect2.right || 
+                    rect1.bottom < rect2.top || 
+                    rect1.top > rect2.bottom);
+        }
+
+        function isColliding(div1, div4) {
+            var rect1 = div1.getBoundingClientRect();
+            var rect2 = div2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                    rect1.left > rect2.right || 
+                    rect1.bottom < rect2.top || 
+                    rect1.top > rect2.bottom);
+        }
+
+        function isColliding(div1, div5) {
+            var rect1 = div1.getBoundingClientRect();
+            var rect2 = div2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                    rect1.left > rect2.right || 
+                    rect1.bottom < rect2.top || 
+                    rect1.top > rect2.bottom);
+        }
