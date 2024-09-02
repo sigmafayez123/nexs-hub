@@ -22,10 +22,36 @@
                 add()
             }
 
+            if (isColliding(myDiv, div3)) {
+                add1()
+            }
+
+            if (isColliding(myDiv, div4)) {
+                add2()
+            }
+
+            if (isColliding(myDiv, div5)) {
+                add3()
+            }
+
             function add() {
                 document.getElementById('number').innerHTML = +1 
                 document.getElementById('div2').style.display = "none";
-                
+            }
+
+            function add1() {
+                document.getElementById('number').innerHTML = +1 
+                document.getElementById('div3').style.display = "none";
+            }
+
+            function add2() {
+                document.getElementById('number').innerHTML = +1 
+                document.getElementById('div4').style.display = "none";
+            }
+
+            function add3() {
+                document.getElementById('number').innerHTML = +1 
+                document.getElementById('div5').style.display = "none";
             }
         });
 
