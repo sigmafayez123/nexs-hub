@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mars 🔴</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <style>
+            #player {
+                width: 25px;
+                height: 45px;
+                position: absolute;
+                margin-top: 30%;
+                margin-left: 46%;
+            }
+
+            #spaceship {
+                margin-left: 51%;
+                margin-top: 22%;
+            }
+
+            #crater1 {
+                margin-top: -30%;
+                margin-left: 40%;
+                width: 140px;
+                height: 100px;
+            }
+
+            #crater2 {
+                width: 140px;
+                height: 110px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="player">
+        <pre>
+        <b><big>O 
+      /|\
+      / \
+        </b></big>
+        </pre>
+    </div>
+
+        <big><b>W A S D</b> to move</big>
+            <br>
+        <b>Health: </b><b id="HP">100</b>
+
+    <pre id="spaceship">     
+       |
+      / \
+      |O|
+      | |
+     /   \
+     | ∩ |
+     | U |
+    /|   |\
+    ||   ||
+    ||   ||
+    ||___||
+    ^ ¯¯¯ ^
+    </pre>
+
+    <pre id="crater1">
+           ______
+        __/  @ # \_____
+       / *  &*  +___   /
+       |  ¤  %__/   \  \
+       |  *  /   * _/   \
+       \__  |__%__/ ____/
+          \________/
+    </pre>
+
+    <pre id="crater2">
+          ______
+         /  ¤   \
+        |        \
+       /  & G    @\____
+       |       #       \
+       |   %    O  K #  \
+       \__  %   _       |
+          \___ /W\ /\__/
+              \___/
+    </pre>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            var player = document.getElementById('player');
+            var currentLeft = parseInt(window.getComputedStyle(player).left);
+            var currentTop = parseInt(window.getComputedStyle(player).top);
+
+            switch(event.key) {
+                case 'a': 
+                    player.style.left = (currentLeft - 50) + 'px';
+                    break;
+                case 'd': 
+                    player.style.left = (currentLeft + 50) + 'px';
+                    break;
+                case 'w': 
+                    player.style.top = (currentTop - 50) + 'px' ;
+                    break;
+                case 's': 
+                    player.style.top = (currentTop + 50) + 'px' ;
+                    break;
+            }
+
+            if (isColliding(player, spaceship)) {
+                window.location.href = 'game(spelfil).html';
+            }
+
+            if (isColliding(player, crater1) || isColliding(player, crater2)) {
+                sick(); healthDown();
+            } else {
+                unsick();
+            }
+        });
+
+        function isColliding(div1, div2) {
+            var rect1 = div1.getBoundingClientRect();
+            var rect2 = div2.getBoundingClientRect();
+
+            return !(rect1.right < rect2.left || 
+                rect1.left > rect2.right || 
+                rect1.bottom < rect2.top || 
+                rect1.top > rect2.bottom);
+        }
+
+        function sick() {
+            document.getElementById("player").style.color = "green"; 
+        }
+
+        function unsick() {
+            document.getElementById("player").style.color = "black"; 
+        }
+
+        function healthDown() {
+            document.getElementById("HP").innerHTML - 10;
+        }
+    </script>
+</body>
+</html>
