@@ -1,4 +1,4 @@
-nexs-hub is where ll  the games made by me, rasz64 are. It's protected by a MIT license, which means that you can do this:
+nexs-hub is where all  the games made by me, rasz64 are. It's protected by a MIT license, which means that you can do this:
 
 Use It Freely: You can use the code for personal or commercial projects without any worries. Want to build your own website or app using it? Go ahead!
 
