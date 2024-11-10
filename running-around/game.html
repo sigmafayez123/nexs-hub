@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>
-            big city 🏙️
+            Village 🛖
         </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charset="UTF-8">
         
         <style>
             #player {
@@ -52,17 +53,8 @@
                 margin-left: 14%;
             }
 
-            #cannibal {
-                width: 150px;
-                height: 130px;
-                margin-left: 300px;
-                margin-top: -40px;
-            }
-
-            button {
-                background-color: #cc6600;
-                border: 2px solid black;
-                border-radius: 7%;
+            #spaceship {
+                margin-left: 51%;
             }
         </style>
     </head>
@@ -76,7 +68,9 @@
     </div>
     
         <big><b>W A S D</b> to move</big>
-        <a href="https://rasz64.github.io/nexs-hub"><button type="button">HOME PAGE</button></a>
+        <br>
+        <button id="rewind" onclick="goBack()">GO BACK</button>
+        <b>Health: </b><b id="HP">100</b>
 
     <div id="house1">
         <pre>
@@ -144,7 +138,21 @@
         //|\\
  ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
     </pre>
-    <img id="cannibal" src="https://raw.githubusercontent.com/rasz64/nexs-hub/main/Cowman.jpg">
+
+    <pre id="spaceship">     
+       |
+      / \
+      |O|
+      | |
+     /   \
+     | ∩ |
+     | U |
+    /|   |\
+    ||   ||
+    ||   ||
+    ||___||
+    ^ ¯¯¯ ^
+    </pre>
 
     <script>
         document.addEventListener('keydown', function(event) {
@@ -182,6 +190,10 @@
             if (isColliding(player, house4)) {
                 window.location.href = 'house4.html';
             }
+
+            if (isColliding(player, spaceship)) {
+                window.location.href = 'mars.html';
+            }
         });
 
         function isColliding(div1, div2) {
@@ -192,6 +204,14 @@
                 rect1.left > rect2.right || 
                 rect1.bottom < rect2.top || 
                 rect1.top > rect2.bottom);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function healthDown() {
+            document.getElementById("HP").innerHTML - 10;
         }
     </script>
 </body>
