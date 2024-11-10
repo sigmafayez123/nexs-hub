@@ -6,3 +6,9 @@
 #road {
     margin-top: 17%;
 }
+
+button {
+    background-color: #cc6600;
+    border: 2px solid black;
+    border-radius: 7%;
+}
