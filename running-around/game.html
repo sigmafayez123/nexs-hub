@@ -17,7 +17,7 @@
             }
 
             #house1 {
-                width: 70px;
+                width: 130px;
                 height: 120px;
                 position: absolute;
                 margin-top: 15%;
@@ -48,6 +48,10 @@
                 margin-left: 23%;
             }
 
+            #house4door {
+                width: 20px;
+            }
+
             #tree {
                 margin-top: 8%;
                 margin-left: 14%;
@@ -55,12 +59,24 @@
 
             #spaceship {
                 margin-left: 51%;
+                width: 25px;
             }
 
             button {
                 background-color: #cc6600;
                 border: 2px solid black;
                 border-radius: 7%;
+            }
+
+            #walmart {
+                margin-left: 65%;
+                margin-top: -10%;
+            }
+
+            #walmartdoor {
+                margin-left: 65%;
+                margin-top: -6%;
+                width: 20px;
             }
         </style>
     </head>
@@ -116,9 +132,7 @@
         |          |  |  |
         </pre>
     </div>
-
-    <div id="house4">
-        <pre>
+        <pre id="house4">
                ______
               / ____ \
              / |____| \
@@ -128,8 +142,6 @@
              ||¯¯| |_||
              ||  |    |
         </pre>
-    </div>
-
     <pre id="tree">
         ¤#¤%&
       %¤%&##@&%&  
@@ -160,6 +172,27 @@
     ^ ¯¯¯ ^
     </pre>
 
+    <pre id="walmart">
+        _______
+       //  _  \\
+      //  /|\  \\
+     //  /_|_\  \\
+    //|  |_|_|  |\\
+   ///| WALMART |\\\
+  ////|         |\\\\
+    __|         |__  
+   /  |         |  \
+   |               |
+   |               |
+   \__.         .__/
+      </pre>
+  
+      <pre id="walmartdoor">
+          /  \
+          | *|
+          |  |
+      </pre>
+
     <script>
         document.addEventListener('keydown', function(event) {
             var player = document.getElementById('player');
@@ -181,25 +214,29 @@
                     break;
             }
 
-            if (isColliding(player, house1)) {
+            if (isColliding(player, house1door)) {
                 window.location.href = 'house1.html';
             }
 
-            if (isColliding(player, house2)) {
+            if (isColliding(player, house2door)) {
                 window.location.href = 'house2.html';
             }
 
-            if (isColliding(player, house3)) {
+            if (isColliding(player, house3door)) {
                 window.location.href = 'house3.html';
             }
 
-            if (isColliding(player, house4)) {
+            if (isColliding(player, house4door)) {
                 window.location.href = 'house4.html';
             }
 
             if (isColliding(player, spaceship)) {
                 window.location.href = 'mars.html';
             }
+
+            if (isColliding(player, walmartdoor)) {
+                window.location.href = 'walmart.html';
+        }
         });
 
         function isColliding(div1, div2) {
