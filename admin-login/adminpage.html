@@ -2,14 +2,62 @@
 <html>
     <head>
         <title>
-        
+            Admin Page
         </title>
 
         <style>
+            body {
+                background-color: #FF8000;
+            }
+
+            input {
+                background-color: #cc6600;
+                border: 2px solid black;
+                border-radius: 7%;
+            }
+
+            .v-line{
+                border-left: 2px solid black;
+                height: 95%;
+                left: 10%;
+                position: absolute;
+            }
 
         </style>
     </head>
 <body>
+    <div class="v-line"></div>
+    <h1>Att göra:</h1>
+    <input type="button" id="save" value="Spara lista" onclick="saveList()">
+    <input type="button" id="load" value="Ladda in lista" onclick="loadList()">
+    <div id="savedList"></div>
+        <br>
+    <input type="text" id="box" value="Skriv här!"/>
+        <br>
+    <input type="button" value="Lägg till" onclick="addItem()">
+        <br>
+    <div id="list"></div>
+    <script>
+        function addItem() {
+            var newItem = document.createElement("div");
+            newItem.innerHTML = document.getElementById("box").value;
+            newItem.onclick = removeItem;
+            document.getElementById("list").appendChild(newItem);
+            saveList();
+        }
 
+        function removeItem() {
+            document.getElementById("list").removeChild(this);
+            saveList();
+        }
+
+        function saveList() {
+            localStorage.storedList = document.getElementById("list").innerHTML;
+        }
+
+        function loadList() {
+            document.getElementById("list").innerHTML = localStorage.storedList;
+        }
+    </script>
 </body>
 </html>
