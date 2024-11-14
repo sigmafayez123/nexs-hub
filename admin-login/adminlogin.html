@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Admin login
+        </title>
+
+        <style>
+            body {
+                background-color: #FF8000;
+                padding: 30px;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Admin login page</h1>
+    <b>Enter the admin password to enter the admin page</b>
+    <br>
+    <b>Password:</b>
+    <input id="passwordBox" type="password">
+    <a href="adminpage.html"><button type="button" onclick="checkPassword()">Submit</button></a>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordBox");
+            var passwordEntered = password.value;
+            if(passwordText == "FinIrko12") {
+                return true;
+            }
+            alert("Access denied! Incorrect password!");
+            return false;
+        }
+    </script>
+</body>
+</html>
