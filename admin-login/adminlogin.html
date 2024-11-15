@@ -21,7 +21,6 @@ e<!DOCTYPE html>
     <input id="passwordBox" type="password">
     <a href="adminpage.html"><button type="button" onclick="return checkPassword()">Submit</button></a>
     </center>
-    <div id="checkOldPassword"
     <script>
         function checkPassword() {
             var password = document.getElementById("passwordBox");
@@ -32,11 +31,6 @@ e<!DOCTYPE html>
             } 
             alert("Access denied! Incorrect password!");
             return false;
-        }
-
-        function checkOldPasswordFunction() {
-            var oldPassword = document.getElementById("passwordBox").value
-            document.getElementById("passwordBox").innerHTML = localStorage.checkOldPassword;
         }
     </script>
 </body>
