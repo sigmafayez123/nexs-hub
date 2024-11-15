@@ -1,3 +1,5 @@
+
+
         document.addEventListener('keydown', function(event) {
             var myDiv = document.getElementById('myDiv');
             var currentLeft = parseInt(window.getComputedStyle(myDiv).left);
@@ -35,22 +37,22 @@
             }
 
             function add() {
-                document.getElementById('number').innerHTML = +1 
-                document.getElementById('div2').style.display = "none";
+                document.getElementById('number').innerHTML = ++
+                document.getElementById('div3').style.display = "none";
             }
 
             function add1() {
-                document.getElementById('number').innerHTML = +1 
+                document.getElementById('number').innerHTML = ++
                 document.getElementById('div3').style.display = "none";
             }
 
             function add2() {
-                document.getElementById('number').innerHTML = +1 
+                document.getElementById('number').innerHTML = ++
                 document.getElementById('div4').style.display = "none";
             }
 
             function add3() {
-                document.getElementById('number').innerHTML = +1 
+                document.getElementById('number').innerHTML = ++
                 document.getElementById('div5').style.display = "none";
             }
         });
