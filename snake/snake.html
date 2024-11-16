@@ -24,7 +24,7 @@
 <body>
     <canvas id="canvas" width="450" height="300"></canvas>
     <br>
-    <b>How to play: </b><p>Use <big>W A S D</big> to move the snake around the board. If you touch the black squares <br> your dead. To play again you must refresh the page. The red squares are fruit<br> If you collide with them, you will eat them and gain one score. <br> The snake will also grow one square longer.</p>
+    <b>How to play: </b><p>Use <big>W A S D</big> to move the snake around the board. If you touch the black squares <br> your dead. To play again you must click the OK button when "Game over! Player scored (score)".<br> The red squares are fruit. If you collide with them, you will eat them and gain one score. <br> The snake will also grow one square longer.</p>
     
     <a href="https://nexs-hub.icu"><button type="button">HOME PAGE</button></a>
     <script>
@@ -55,11 +55,27 @@
           }
           var result = snake.move();
           if(result == "gameover") {
-            alert("Game over! Player scored " + game.score); 
+            alert("Game over! Player scored " + game.score);
+            game.resetGame();
             return;
           }
           graphics.drawGame();
           game.timer = window.setTimeout("game.tick()", 500);
+        },
+
+        resetGame: function() {
+            game.score = 0;
+            game.tickNumber = 0;
+            snake.parts = [
+                {x: 4, y: 2},
+                {x: 3, y: 2},
+                {x: 2, y: 2}
+            ];
+            snake.facing = "E";
+            game.fruit = [{x: 1, y: 1}];
+            alert("Game over! Player scored " + game.score);
+            graphics.drawGame();
+            game.tick();
         },
         addRandomFruit: function() {
 			var randomY = Math.floor(Math.random() * game.board.length) + 0;
