@@ -56,6 +56,9 @@
           var result = snake.move();
           if(result == "gameover") {
             alert("Game over! Player scored " + game.score); 
+	    window.setTimeout(100) {
+		    location.reload(true);
+	    }
             return;
           }
           graphics.drawGame();
