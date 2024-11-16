@@ -5,6 +5,8 @@
             Admin Page
         </title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
         <style>
             body {
                 background-color: #FF8000;
@@ -16,7 +18,7 @@
                 border-radius: 7%;
             }
 
-            .v-line{
+            .v-line {
                 border-left: 2px solid black;
                 height: 95%;
                 left: 12%;
@@ -28,21 +30,110 @@
                 border: 2px solid black;
                 border-radius: 7%;
             }
+
+            #downloadable {
+                margin-left: 15%;
+                margin-top: -10%;
+
+                .v-line {
+                    margin-left: 30%;
+                    margin-top: -45%;
+                }
+
+                .v-line2 {
+                    border-left: 2px solid black;
+                    height: 84%;
+                    left: 28%;
+                    top: 11%;
+                    position: absolute;
+                }
+            }
+
+            #left-part-files {
+                margin-left: 17%;
+                margin-top: -45%;
+            }
         </style>
     </head>
 <body>
-    <div class="v-line"></div>
-    <a href="https://nexs-hub.icu"><button type="button">HOME PAGE</button></a>
-    <h1>Att göra:</h1>
-    <input type="button" id="save" value="Spara lista" onclick="saveList()">
-    <input type="button" id="load" value="Ladda in lista" onclick="loadList()">
-    <div id="savedList"></div>
+    <div id="todolist">
+        <div class="v-line"></div>
+        <a href="https://nexs-hub.icu"><button type="button">HOME PAGE</button></a>
+        <h1>Att göra:</h1>
+        <input type="button" id="save" value="Spara lista" onclick="saveList()">
+        <input type="button" id="load" value="Ladda in lista" onclick="loadList()">
+        <div id="savedList"></div>
+            <br>
+        <input type="text" id="box" value="Skriv här!"/>
+            <br>
+        <input type="button" value="Lägg till" onclick="addItem()">
+            <br>
+        <div id="list"></div>
+    </div>
+    <div id="downloadable">
+        <div class="v-line2"></div>
+        <h1>Alla filer på webbsidan i <br>alfabetisk ordning enligt filnamn</h1>
         <br>
-    <input type="text" id="box" value="Skriv här!"/>
-        <br>
-    <input type="button" value="Lägg till" onclick="addItem()">
-        <br>
-    <div id="list"></div>
+        
+        <a href="admin/adminlogin.html">admin-login</a><br>
+        <a href="admin/adminpage.html">admin-page</a><br>
+        <a href="ascii-art/asciiart.html">ascii-art</a><br>
+        <a href="ascii-art/cow.html">ascii cow</a><br>
+        <a href="ball-clicker/game.html">ball-clicker (spelfil)</a><br>
+        <a href="ball-clicker/script.js">ball clicker (JavaScript)</a><br>
+        <a href="ball-clicker/style.css">ball clicker (CSS)</a><br>
+        <a href="blog/blog.html">blog</a><br>
+        <a href="car-game/car-game.html">car-game (spelfil)</a><br>
+        <a href="car-game/script.js">car-game (JavaScript)</a><br>
+        <a href="car-game/style.css">car-game (CSS)</a><br>
+        <a href="donation/donation.html">donate</a><br>
+        <a href="gameWIKI/ball-clickerWIKI.html">ball-clicker wiki</a><br>
+        <a href="car-gameWIKI.html">car-game wiki</a><br>
+        <a href="gregEatingSimulatorWIKI.html">Greg Eating Simulator wiki</a><br>
+        <a href="oslpWIKI.html">Operation-Stickman-Long-Path wiki</a><br>
+        <a href="running-aroundWIKI.html">big city wiki</a><br>
+        <a href="gregEatingSim/gregEatingSim.html">Greg Eating Simulator (spelfil)</a><br>
+        <a href="gregEatingSim/script.js">Greg Eating Simulator (JavaScript)</a><br>
+        <a href="gregEatingSim/style.css">Greg Eating Simulator (CSS)</a><br>
+        <a href="operation-stickman-long-path/cyoa/bar.html">oslp bar</a><br>
+        <a href="operation-stickman-long-path/cyoa/continue-follow-path.html">oslp continue-follow-path</a><br>
+        <a href="operation-stickman-long-path/cyoa/continue-follow-path2.html">oslp continue-follow-path2</a><br>
+        <a href="operation-stickman-long-path/cyoa/drunk.html">oslp drunk</a><br>
+        <a href="operation-stickman-long-path/cyoa/flowers.html">oslp flowers</a><br>
+        <a href="operation-stickman-long-path/cyoa/mountainhike.html">oslp mountainhike</a><br>
+        <a href="operation-stickman-long-path/cyoa/off-road.html">oslp off-road</a><br>
+        <a href="operation-stickman-long-path/cyoa/operation-stickman-long-path.html">oslp start</a><br>
+        <a href="operation-stickman-long-path/cyoa/path-follow.html">oslp path-follow</a><br>
+        <a href="operation-stickman-long-path/cyoa/shoot.html">oslp shoot</a><br>
+        <a href="operation-stickman-long-path/cyoa/town.html">oslp town</a><br>
+        <a href="operation-stickman-long-path/cyoa/weapons.html">oslp weapons</a><br>
+        <a href="operation-stickman-long-path/index.html">oslp index</a><br>
+        <a href="operation-stickman-long-path/paper.jpg">oslp paper</a><br>
+        <a href="running-around/game.html">big city (main spelfil)</a><br>
+        <a href="running around/house1.html">big city hus 1</a><br>
+        <a href="running around/house2.html">big city hus 2</a><br>
+        <a href="running-around/house3.html">big city hus 3</a><br>
+        <a href="running-around/house4.html">big city hus 4</a><br>
+        <a href="running-around/mars.html">big city mars</a>
+        <div class="v-line"></div>
+        <hr id="bottom">
+        <div id="left-part-files">
+            <a href="snake/snake.html">snake</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/.gitignore">.gitignore</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/CNAME">CNAME</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/Cowman.jpg">Cowman.jpg</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/LICENSE">LICENSE</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/README.md">README.md</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/Screenshot%202024-08-17%20at%2014-56-17%20Operation%20Stickman-Long-Path.png">Screenshot oslp shoot</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/Screenshot%202024-08-17%20at%2014-56-43%20Greg%20Eating%20Simulator%20-%20Level%201.png">Screenshot Greg Eating Simulator</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/Screenshot%202024-08-17%20at%2014-57-12%20car%20game.png">Screenshot car-game</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/Screenshot%202024-08-17%20at%2014-57-31%20run%20around%20i%20guess%20%F0%9F%A4%B7.png">Screenshot big city</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/Screenshot%202024-08-17%20at%2014-57-42%20house%20%F0%9F%8F%A0.png">Screenshot big city house</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/ball-clicker.PNG">ball-clicker.png</a><br>
+            <a href="https://github.com/rasz64/nexs-hub/blob/main/cow.png">cow.png</a><br>
+            <a href="https://nexs-hub.icu">index</a><br>
+        </div>
+    </div>
     <script>
         function addItem() {
             var newItem = document.createElement("div");
