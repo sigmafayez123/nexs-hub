@@ -115,9 +115,11 @@
 
             var aiMiddle = ai.y + (ai.height / 2);
             if(aiMiddle < ball.y) {
+                Math.floor(Math.random() * ai.y);
                 ai.move(40);
            }
            if(aiMiddle > ball.y) {
+               Math.floor(Math.random() * ai.y);
                 ai.move(38);
            }
            for(var keyCode in heldDown) {
