@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MAP
+        </title>
+
+        <style>
+            body {
+                background-color: beige;
+            }
+
+            #house1hl {
+                width: 100px;
+                height: 50px;
+                display: inline-block;
+            }
+
+            #map {
+                background-color: green;
+                width: 1500px;
+                height: 800px;
+                z-index: -2;
+            }
+
+            #road {
+                width: 50px;
+                height: 15px;
+                background-color: #663300;
+                margin-top: -35vw;
+            }
+
+            #road2 {
+                width: 100px;
+                height: 15px;
+                background-color: #663300;
+                transform: rotate(20deg);
+                margin-left: 2vw;
+            }
+            
+            #house1 {
+                margin: 0;
+                width: 50px;
+                height: 25px;
+                background-color: #996633 ;
+                transform: rotate(20deg);
+                margin-left: 3vw;
+                margin-top: -3vw;
+                z-index: -1;
+            }
+
+            #h1ROOF {
+                background-color: #996633;
+                width: 34px;
+                height: 35px;
+                border-top: 1px solid #996633;
+                transform: rotate(-30deg);
+                margin-top: -2.2vw;
+                margin-left: 3.6vw;
+            }
+
+            #road3 {
+                width: 120px;
+                height: 15px;
+                background-color: #663300;
+                margin-top: -2.75vw;
+                margin-left: 6.7vw;
+            }
+
+            #road4 {
+                width: 120px;
+                height: 15px;
+                background-color: #663300;
+                transform: rotate(90deg);
+                margin-top: 2.7vw;
+                margin-left: 7vw;
+            }
+
+            #house2 {
+                background-color: #996633;
+                width: 30px;
+                height: 45px;
+                margin-top: -3vw;
+                margin-left: 7.8vw;
+            }
+
+            #house2hl {
+                width: 30px;
+                height: 45px;
+                display: inline-block;
+            }
+
+            #house3 {
+                background-color: #996633;
+                width: 30px;
+                height: 45px; 
+                margin-top: -3vw;
+                margin-left: 11vw;
+            }
+
+            #house3hl {
+                width: 35px;
+                height: 45px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+<body>
+    <div id="map"></div>
+    <div id="road"></div>
+    <div id="road2"></div>
+    <a href="house1.html" id="house1hl">
+        <div id="house1"></div>
+        <div id="h1ROOF"></div>
+    </a>
+    <div id="road3"></div>
+    <div id="road4"></div>
+    
+    <a href="house2.html" id="house2hl"><div id="house2"></div></a>
+    <a href="house3.html" id="house3hl"><div id="house3"></div></a>
+    <a href="farm1.html" id="farm1.html"></a>
+</body>
+</html>
