@@ -13,5 +13,5 @@ function save() {
 }
 
 function load() {
-    document.getElementById("loadInput").value = localStorage.getItem("data");
+    document.getElementById("score").innerHTML = localStorage.getItem("data");
 }
