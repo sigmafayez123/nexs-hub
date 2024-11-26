@@ -9,9 +9,9 @@ circle.addEventListener("click", function() {
 });
 
 function save() {
-    localStorage.storedClicks = doument.getElementById("circle").value;
+    doument.getElementById("circle").value = localStorage.setItem("data", saveInput;
 }
 
 function load() {
-    document.getElementById("score").innerHTML = localStorage.storedClicks;
+    document.getElementById("score").innerHTML = localStorage.getItem("data");
 }
