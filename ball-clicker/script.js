@@ -7,3 +7,7 @@ circle.addEventListener("click", function() {
     score++;
     scoreElement.textContent = score;
 });
+
+function save() {
+    document.getElementById("")
+}
