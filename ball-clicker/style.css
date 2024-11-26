@@ -16,6 +16,12 @@ button {
     border-radius: 7%;
 }
 
+input {
+    background-color: #cc6600;
+    border: 2px solid black;
+    border-radius: 7%;
+}
+
 body {
     background-color: #FF8000;
 }
