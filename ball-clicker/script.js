@@ -9,7 +9,7 @@ circle.addEventListener("click", function() {
 });
 
 function save() {
-    doument.getElementById("circle").value = localStorage.setItem("data", saveInput;
+    doument.getElementById("score").value = localStorage.setItem("data", saveInput;
 }
 
 function load() {
